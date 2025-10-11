@@ -24,6 +24,7 @@ namespace URGP
                     {
                         game.Line++;
                         Progress.ProgressLines(game);
+                        game.infoText2 = "";
                     }
 
                 }
@@ -33,6 +34,7 @@ namespace URGP
                     {
                         game.Line++;
                         Progress.ProgressLines(game);
+                        game.infoText2 = "";
                     }
                 }
             }
