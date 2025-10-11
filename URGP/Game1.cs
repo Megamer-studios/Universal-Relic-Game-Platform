@@ -333,6 +333,7 @@ namespace URGP
                 }
             }
 
+            Sequencer.SequenceLines(this);
             previousKeyboardState = keyboardState;
 
             base.Update(gameTime);
@@ -854,11 +855,11 @@ Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
                 string dInfo;
                 if (soundEffect != null)
                 {
-                    dInfo = "Debug Mode" + "\nLine:" + Line.ToString() + "\nCem1:" + Cem1.ToString() + "\nCem2:" + Cem2.ToString() + "\nCem3:" + Cem3.ToString() + "\nBackground:" + background.ToString() + "\nBG:" + bgImg.ToString() + "\nBGColour:" + backgroundColor.ToString() + "\nRoute:" + filePath + "\nSound:" + soundEffect.Name + "\nSave:" + ReadSave(@"Saves/Save.dat") + "\nBCSave:" + ReadSave(@"Saves/BC.dat") + "\nBL:" + bottomLeft.ToString() + "\nBM:" + bottomMid.ToString() + "\nBR:" + bottomRight.ToString() + "\nBGM:" + BMG.Name;
+                    dInfo = "Debug Mode" + "\nLine:" + Line.ToString() + "\nCem1:" + Cem1.ToString() + "\nCem2:" + Cem2.ToString() + "\nCem3:" + Cem3.ToString() + "\nBackground:" + background.ToString() + "\nBG:" + bgImg.ToString() + "\nBGColour:" + backgroundColor.ToString() + "\nRoute:" + filePath + "\nSound:" + soundEffect.Name + "\nSave:" + ReadSave(@"Saves/Save.dat") + "\nBCSave:" + ReadSave(@"Saves/BC.dat") + "\nBL:" + bottomLeft.ToString() + "," + NewbottomLeft.ToString() + "\nBM:" + bottomMid.ToString() + "," + NewbottomMid.ToString() + "\nBR:" + bottomRight.ToString() + "," + NewbottomRight.ToString() + "\nBGM:" + BMG.Name;
                 }
                 else
                 {
-                    dInfo = "Debug Mode" + "\nLine:" + Line.ToString() + "\nCem1:" + Cem1.ToString() + "\nCem2:" + Cem2.ToString() + "\nCem3:" + Cem3.ToString() + "\nBackground:" + background.ToString() + "\nBG:" + bgImg.ToString() + "\nBGColour:" + backgroundColor.ToString() + "\nRoute:" + filePath + "\nSound: NULL" + "\nSave:" + ReadSave(@"Saves/Save.dat") + "\nBCSave:" + ReadSave(@"Saves/BC.dat") + "\nBL:" + bottomLeft.ToString() + "\nBM:" + bottomMid.ToString() + "\nBR:" + bottomRight.ToString() + "\nBGM:" + BMG.Name;
+                    dInfo = "Debug Mode" + "\nLine:" + Line.ToString() + "\nCem1:" + Cem1.ToString() + "\nCem2:" + Cem2.ToString() + "\nCem3:" + Cem3.ToString() + "\nBackground:" + background.ToString() + "\nBG:" + bgImg.ToString() + "\nBGColour:" + backgroundColor.ToString() + "\nRoute:" + filePath + "\nSound: NULL" + "\nSave:" + ReadSave(@"Saves/Save.dat") + "\nBCSave:" + ReadSave(@"Saves/BC.dat") + "\nBL:" + bottomLeft.ToString() + "," + NewbottomLeft.ToString() + "\nBM:" + bottomMid.ToString() + "," + NewbottomMid.ToString() + "\nBR:" + bottomRight.ToString() + "," + NewbottomRight.ToString() + "\nBGM:" + BMG.Name;
                 }
                 _spriteBatch.DrawString(_font, dInfo, new Vector2(5, 5), Color.Lime);
 

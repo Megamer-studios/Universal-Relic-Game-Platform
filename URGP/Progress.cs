@@ -87,6 +87,75 @@ namespace URGP
                     game.Portrait = game.Content.Load<Texture2D>("Portrait3");
                     game.BMG = game.Content.Load<SoundEffect>("Dead");
                 }
+                else if (game.Line == 6)
+                {
+                    game.isQuestion = false;
+                    game.infoText = "";
+                    game.bgImg = true;
+                    game.backgroundColor = Color.Black;
+                    game.ResetPositions();
+                    game.background = game.Content.Load<Texture2D>("bg2");
+
+                    game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
+                    game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
+                    game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
+                    game.isSoundPlaying = true;
+                    game.Portrait = game.Content.Load<Texture2D>("Portrait1");
+                    game.BMG = game.Content.Load<SoundEffect>("AMachine");
+                }      
+                else if (game.Line == 7)
+                {
+                    game.isQuestion = true;
+                    game.infoText = "";
+                    game.bgImg = true;
+                    game.backgroundColor = Color.Black;
+                    game.NewbottomMid.Y -= 200;
+                    game.background = game.Content.Load<Texture2D>("bg2");
+
+                    game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
+                    game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
+                    game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
+                    
+                    game.isSoundPlaying = true;
+                    game.Portrait = game.Content.Load<Texture2D>("Portrait2");
+                    game.BMG = game.Content.Load<SoundEffect>("AMachine");
+                }
+                else if (game.Line == 8)
+                {
+                    game.isQuestion = true;
+                    game.infoText = "";
+                    game.bgImg = true;
+                    game.backgroundColor = Color.Black;
+                    game.NewbottomMid.Y += 900;
+                    game.NewbottomMid.X -= 900;
+                    game.background = game.Content.Load<Texture2D>("bg2");
+
+                    game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
+                    game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
+                    game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
+
+                    game.isSoundPlaying = true;
+                    game.Portrait = game.Content.Load<Texture2D>("Portrait1");
+                    game.BMG = game.Content.Load<SoundEffect>("AMachine");
+                }
+                else if (game.Line == 9)
+                {
+                    game.isQuestion = false;
+                    game.infoText = "";
+                    game.bgImg = true;
+                    game.backgroundColor = Color.Black;
+                    game.NewbottomRight.X += 600;
+                    game.NewbottomLeft.X -= 600;
+                    game.background = game.Content.Load<Texture2D>("bg2");
+
+                    game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
+                    game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
+                    game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
+
+                    game.isSoundPlaying = true;
+                    game.Portrait = game.Content.Load<Texture2D>("Empty");
+                    game.BMG = game.Content.Load<SoundEffect>("AMachine");
+                }
             }
         }
     }
