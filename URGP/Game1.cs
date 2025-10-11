@@ -121,7 +121,7 @@ namespace URGP
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            Window.Title = "Game";
+            Window.Title = "Universal Relic Game Platform";
 
             _graphics.HardwareModeSwitch = false;
         }
