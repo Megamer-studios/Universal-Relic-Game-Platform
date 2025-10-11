@@ -6,16 +6,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Reflection;
+
 using System.Security.Cryptography;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading;
-using System.Timers;
+
 using URGP.Inventory;
-using static System.Net.Mime.MediaTypeNames;
-using Timer = System.Timers.Timer;
+
 namespace URGP
 {
     public class Game1 : Game
@@ -43,7 +38,7 @@ namespace URGP
         Rectangle diaRect;
         public string infoText = "";
         public string infoText2 = "";
-        public bool isSoundPlaying = false;
+        
         public bool debugMode = false;
         public string filePath = @"Dialogues/Dia1.dlg";
         public bool IsConsoleOpen = false;
@@ -171,7 +166,7 @@ namespace URGP
             Cem3 = Content.Load<Texture2D>("Empty");
             background = Content.Load<Texture2D>("bg1");
             diaBox = Content.Load<Texture2D>("Diabox");
-            isSoundPlaying = false;
+          
             Line1();
             Progress.ProgressLines(this);
             // TODO: use this.Content to load your game content here
@@ -341,10 +336,10 @@ namespace URGP
         public void Line1()
         {
             BMG = Content.Load<SoundEffect>("AMachine");
-            isSoundPlaying = true;
+           
             isQuestion = false;
             filePath = @"Dialogues/Dia1.dlg";
-            isSoundPlaying = false;
+         
             bgImg = true;
             Line = 1;
             backgroundColor = Color.Black;

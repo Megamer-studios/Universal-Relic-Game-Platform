@@ -34,7 +34,7 @@ namespace URGP
                     game.Cem1 = game.Content.Load<Texture2D>("Empty");
                     game.Cem2 = game.Content.Load<Texture2D>("Empty");
                     game.Cem3 = game.Content.Load<Texture2D>("Empty");
-                    game.isSoundPlaying = false;
+                   
                     game.soundEffect = game.Content.Load<SoundEffect>("Scream");
                     game.soundEffect.Play();
                     game.Portrait = game.Content.Load<Texture2D>("Empty");
@@ -52,7 +52,7 @@ namespace URGP
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
-                    game.isSoundPlaying = true;
+               
                     game.Portrait = game.Content.Load<Texture2D>("Portrait2");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
@@ -67,7 +67,7 @@ namespace URGP
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
-                    game.isSoundPlaying = true;
+                   
                     game.Portrait = game.Content.Load<Texture2D>("Portrait1");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
@@ -83,7 +83,7 @@ namespace URGP
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
-                    game.isSoundPlaying = true;
+             
                     game.Portrait = game.Content.Load<Texture2D>("Portrait3");
                     game.BMG = game.Content.Load<SoundEffect>("Dead");
                 }
@@ -99,7 +99,7 @@ namespace URGP
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
-                    game.isSoundPlaying = true;
+                   
                     game.Portrait = game.Content.Load<Texture2D>("Portrait1");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }      
@@ -116,7 +116,7 @@ namespace URGP
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
                     
-                    game.isSoundPlaying = true;
+                
                     game.Portrait = game.Content.Load<Texture2D>("Portrait2");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
@@ -134,7 +134,7 @@ namespace URGP
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
 
-                    game.isSoundPlaying = true;
+                
                     game.Portrait = game.Content.Load<Texture2D>("Portrait1");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
@@ -152,7 +152,6 @@ namespace URGP
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
 
-                    game.isSoundPlaying = true;
                     game.Portrait = game.Content.Load<Texture2D>("Empty");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
