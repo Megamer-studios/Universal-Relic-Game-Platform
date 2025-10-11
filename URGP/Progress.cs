@@ -140,7 +140,7 @@ namespace URGP
                 }
                 else if (game.Line == 9)
                 {
-                    game.isQuestion = true;
+                    game.isQuestion = false;
                     game.infoText = "";
                     game.bgImg = true;
                     game.backgroundColor = Color.Black;
