@@ -209,7 +209,7 @@ URGP/
 
 ## 🧑‍💻 Credits
 
-**Created by:** Megamer Studios
+**Created by:** Megamer Studios 
 **Framework:** MonoGame  
 **License:** MIT  
 
