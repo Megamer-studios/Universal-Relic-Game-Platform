@@ -117,13 +117,13 @@ namespace URGP
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
-                    
-                
                     game.Portrait = game.Content.Load<Texture2D>("Portrait2");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
+             
                 else if (game.Line == 8)
                 {
+
                     game.isQuestion = true;
                     game.infoText = "";
                     game.bgImg = true;
@@ -208,7 +208,7 @@ namespace URGP
                 }
                 else if (game.Line == 13)
                 {
-                    game.isQuestion = true;
+                    game.isQuestion = false;
                     game.infoText = "";
                     game.bgImg = true;
                     game.backgroundColor = Color.Black;

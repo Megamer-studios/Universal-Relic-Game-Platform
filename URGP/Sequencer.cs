@@ -38,7 +38,33 @@ namespace URGP
                         game.infoText2 = "";
                     }
                 }
-           
+                else if (game.Line == 10)
+                {
+                    if (Vector2.Distance(game.bottomMid, game.NewbottomMid ) <= 0.1f)
+                    {
+                        game.Line++;
+                        Progress.ProgressLines(game);
+                        game.infoText2 = "";
+                    }
+                }
+                else if (game.Line == 11)
+                {
+                    if (Vector2.Distance(game.bottomMid, game.NewbottomMid) <= 0.1f)
+                    {
+                        game.Line++;
+                        Progress.ProgressLines(game);
+                        game.infoText2 = "";
+                    }
+                }
+                else if (game.Line == 12)
+                {
+                    if (Vector2.Distance(game.bottomMid, game.NewbottomMid) <= 0.1f)
+                    {
+                        game.Line++;
+                        Progress.ProgressLines(game);
+                        game.infoText2 = "";
+                    }
+                }
             }
             }
         }
