@@ -80,6 +80,12 @@
 /processorParam:TextureFormat=Compressed
 /build:File.spritefont
 
+#begin Invert.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Invert.fx
+
 #begin Portrait1.png
 /importer:TextureImporter
 /processor:TextureProcessor

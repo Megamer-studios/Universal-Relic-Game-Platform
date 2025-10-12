@@ -20,6 +20,7 @@ namespace URGP
             {
                 if (game.Line == 1)
                 {
+                    
                     game.Line1();
                 }
                 else if (game.Line == 2)
@@ -35,7 +36,7 @@ namespace URGP
                     game.Cem1 = game.Content.Load<Texture2D>("Empty");
                     game.Cem2 = game.Content.Load<Texture2D>("Empty");
                     game.Cem3 = game.Content.Load<Texture2D>("Empty");
-                   
+                    game.AreColoursInverted = false;
                     game.soundEffect = game.Content.Load<SoundEffect>("Scream");
                     game.soundEffect.Play();
                     game.Portrait = game.Content.Load<Texture2D>("Empty");
@@ -49,7 +50,7 @@ namespace URGP
                     game.backgroundColor = Color.Black;
                     game.background = game.Content.Load<Texture2D>("bg2");
                     game.NewbottomMid.Y -= 900;
-
+                    game.AreColoursInverted = false;
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
@@ -68,7 +69,7 @@ namespace URGP
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
-                   
+                    game.AreColoursInverted = false;
                     game.Portrait = game.Content.Load<Texture2D>("Portrait1");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
@@ -80,7 +81,7 @@ namespace URGP
                     game.NewbottomLeft.X -= 900;
                     game.NewbottomRight.X += 900;
                     game.background = game.Content.Load<Texture2D>("bg1");
-                   
+                    game.AreColoursInverted = false;
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
@@ -96,7 +97,7 @@ namespace URGP
                     game.backgroundColor = Color.Black;
                     game.ResetPositions();
                     game.background = game.Content.Load<Texture2D>("bg2");
-
+                    game.AreColoursInverted = false;
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
@@ -112,7 +113,7 @@ namespace URGP
                     game.backgroundColor = Color.Black;
                     game.NewbottomMid.Y -= 200;
                     game.background = game.Content.Load<Texture2D>("bg2");
-
+                    game.AreColoursInverted = false;
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
@@ -130,7 +131,7 @@ namespace URGP
                     game.NewbottomMid.Y += 900;
                     game.NewbottomMid.X -= 900;
                     game.background = game.Content.Load<Texture2D>("bg2");
-
+                    game.AreColoursInverted = false;
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
@@ -148,7 +149,7 @@ namespace URGP
                     game.NewbottomRight.X += 600;
                     game.NewbottomLeft.X -= 600;
                     game.background = game.Content.Load<Texture2D>("bg2");
-
+                    game.AreColoursInverted = false;
                     game.Cem1 = game.Content.Load<Texture2D>("Sprite2");
                     game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
                     game.Cem3 = game.Content.Load<Texture2D>("Sprite5");
@@ -156,6 +157,72 @@ namespace URGP
                     game.Portrait = game.Content.Load<Texture2D>("Empty");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
+                else if (game.Line == 10)
+                {
+                    game.isQuestion = true;
+                    game.infoText = "";
+                    game.bgImg = true;
+                    game.backgroundColor = Color.Black;
+                    game.ResetPositions();
+                    game.background = game.Content.Load<Texture2D>("bg2");
+                    game.AreColoursInverted = false;
+                    game.Cem1 = game.Content.Load<Texture2D>("Empty");
+                    game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
+                    game.Cem3 = game.Content.Load<Texture2D>("Empty");
+
+                    game.Portrait = game.Content.Load<Texture2D>("Portrait1");
+                    game.BMG = game.Content.Load<SoundEffect>("AMachine");
+                }
+                else if (game.Line == 11)
+                {
+                    game.isQuestion = true;
+                    game.infoText = "";
+                    game.bgImg = true;
+                    game.backgroundColor = Color.Black;
+                    game.NewbottomMid.Y += 250;
+                    game.background = game.Content.Load<Texture2D>("bg2");
+                    game.AreColoursInverted = true;
+                    game.Cem1 = game.Content.Load<Texture2D>("Empty");
+                    game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
+                    game.Cem3 = game.Content.Load<Texture2D>("Empty");
+                    game.soundEffect = game.Content.Load<SoundEffect>("Scream");
+                    game.soundEffect.Play();
+                    game.Portrait = game.Content.Load<Texture2D>("Portrait1");
+                    game.BMG = game.Content.Load<SoundEffect>("AMachine");
+                }
+                else if (game.Line == 12)
+                {
+                    game.isQuestion = true;
+                    game.infoText = "";
+                    game.bgImg = true;
+                    game.backgroundColor = Color.Black;
+                    game.ResetPositions();
+                    game.background = game.Content.Load<Texture2D>("bg2");
+                    game.AreColoursInverted = true;
+                    game.Cem1 = game.Content.Load<Texture2D>("Empty");
+                    game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
+                    game.Cem3 = game.Content.Load<Texture2D>("Empty");
+             
+                    game.Portrait = game.Content.Load<Texture2D>("Portrait1");
+                    game.BMG = game.Content.Load<SoundEffect>("AMachine");
+                }
+                else if (game.Line == 13)
+                {
+                    game.isQuestion = true;
+                    game.infoText = "";
+                    game.bgImg = true;
+                    game.backgroundColor = Color.Black;
+                    game.ResetPositions();
+                    game.background = game.Content.Load<Texture2D>("bg2");
+                    game.AreColoursInverted = false;
+                    game.Cem1 = game.Content.Load<Texture2D>("Empty");
+                    game.Cem2 = game.Content.Load<Texture2D>("Sprite1");
+                    game.Cem3 = game.Content.Load<Texture2D>("Empty");
+
+                    game.Portrait = game.Content.Load<Texture2D>("Portrait1");
+                    game.BMG = game.Content.Load<SoundEffect>("AMachine");
+                }
+
             }
         }
     }

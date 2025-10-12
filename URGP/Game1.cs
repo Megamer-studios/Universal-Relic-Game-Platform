@@ -39,7 +39,8 @@ namespace URGP
         Rectangle diaRect;
         public string infoText = "";
         public string infoText2 = "";
-        
+       public bool AreColoursInverted = false;
+
         public bool debugMode = false;
         public string filePath = @"Dialogues/Dia1.dlg";
         public bool IsConsoleOpen = false;
@@ -311,7 +312,7 @@ namespace URGP
            
             isQuestion = false;
             filePath = @"Dialogues/Dia1.dlg";
-         
+           AreColoursInverted = false;
             bgImg = true;
             Line = 1;
             backgroundColor = Color.Black;
@@ -323,7 +324,7 @@ namespace URGP
             bottomLeft = new Vector2(0, 768 - 512);
             bottomRight = new Vector2(1024 - 256, 768 - 512);
             bottomMid = new Vector2(400, 767 - 512);
-      
+            ResetPositions();
 
             Portrait = Content.Load<Texture2D>("Empty");
             background = Content.Load<Texture2D>("bg1");
@@ -410,7 +411,14 @@ namespace URGP
                 {
                     Line = Line,
                     FilePath = filePath,
-                    InventoryItemIds = PlayerInventory.Select(i => i.id).ToList()
+                    InventoryItemIds = PlayerInventory.Select(i => i.id).ToList(),
+                    BottomMidX = NewbottomMid.X,
+                    BottomMidY = NewbottomMid.Y,
+                    BottomLeftX = NewbottomLeft.X,
+                    BottomLeftY = NewbottomLeft.Y,
+                    BottomRightX = NewbottomRight.X,
+                    BottomRightY = NewbottomRight.Y,
+         
                 };
 
                 string json = System.Text.Json.JsonSerializer.Serialize(saveData);
@@ -562,6 +570,9 @@ namespace URGP
                         if (item != null)
                             PlayerInventory.Add(item);
                     }
+                    NewbottomMid = new Vector2(saveData.BottomMidX, saveData.BottomMidY);
+                    NewbottomLeft = new Vector2(saveData.BottomLeftX, saveData.BottomLeftY);
+                    NewbottomRight = new Vector2(saveData.BottomRightX, saveData.BottomRightY);
                     Progress.ProgressLines(this);
                     ConsoleText = "";
                 }
@@ -586,7 +597,14 @@ namespace URGP
                     {
                         Line = Line,
                         FilePath = filePath,
-                        InventoryItemIds = PlayerInventory.Select(i => i.id).ToList()
+                        InventoryItemIds = PlayerInventory.Select(i => i.id).ToList(),
+                        BottomMidX = NewbottomMid.X,
+                        BottomMidY = NewbottomMid.Y,
+                        BottomLeftX = NewbottomLeft.X,
+                        BottomLeftY = NewbottomLeft.Y,
+                        BottomRightX = NewbottomRight.X,
+                        BottomRightY = NewbottomRight.Y,
+
                     };
 
                     string json = System.Text.Json.JsonSerializer.Serialize(saveData);
@@ -747,6 +765,9 @@ namespace URGP
                     if (item != null)
                         PlayerInventory.Add(item);
                 }
+                NewbottomMid = new Vector2(saveData.BottomMidX, saveData.BottomMidY);
+                NewbottomLeft = new Vector2(saveData.BottomLeftX, saveData.BottomLeftY);
+                NewbottomRight = new Vector2(saveData.BottomRightX, saveData.BottomRightY);
                 ConsoleText = "";
                 Progress.ProgressLines(this);
             }
@@ -759,12 +780,19 @@ namespace URGP
 
         protected override void Draw(GameTime gameTime)
         {
+            Effect invertEffect = Content.Load<Effect>("Invert");
             GraphicsDevice.SetRenderTarget(_renderTarget);
             GraphicsDevice.Clear(backgroundColor);
 
 
-
-            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            if (AreColoursInverted)
+            {
+                _spriteBatch.Begin(samplerState: SamplerState.PointClamp, effect: invertEffect);
+            }
+            else {
+                _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            }
+                
             if (bgImg)
             {
                 _spriteBatch.Draw(background, new Vector2(0, 0), null,
