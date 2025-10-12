@@ -212,7 +212,7 @@ URGP/
 
 ## 🧑‍💻 Credits
 
-**Created by:** Megamer Studios & Unknown Cyberia Game Entertainment
+**Created by:** Megamer Studios & Unknown Cyberia Game Entertainment    
 **Framework:** MonoGame  
 **License:** MIT  
 
