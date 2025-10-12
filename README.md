@@ -225,7 +225,7 @@ URGP is designed to scale:
 - Dialogue branching via tagged `.dlg` blocks  
 - Choice UI and visual transitions  
 - Scripting layer for dynamic variables  
-- Custom save serialization and achievements  
+- Custom save serialization
 
 ---
 
