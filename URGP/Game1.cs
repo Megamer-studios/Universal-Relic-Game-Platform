@@ -161,7 +161,7 @@ namespace URGP
 
             pixel = new Texture2D(GraphicsDevice, 1, 1);
             pixel.SetData(new Color[] { Color.White });
-            // TODO: use this.Content to load your game content here
+       
             Cem1 = Content.Load<Texture2D>("Sprite2");
             Cem2 = Content.Load<Texture2D>("Empty");
             Cem3 = Content.Load<Texture2D>("Empty");
@@ -170,7 +170,7 @@ namespace URGP
           
             Line1();
             Progress.ProgressLines(this);
-            // TODO: use this.Content to load your game content here
+            
         }
         private static void DeriveKeyAndIV(string passphrase, byte[] salt, out byte[] key, out byte[] iv)
         {
@@ -182,20 +182,20 @@ namespace URGP
         protected override void Update(GameTime gameTime)
         {
 
-            // TODO: Add your update logic here
+          
             if (_previousBGM != BMG)
             {
-                // Stop and dispose the old instance
+               
                 BMGins?.Stop();
                 BMGins?.Dispose();
 
-                // Create new instance from updated BMG
+           
                 BMGins = BMG.CreateInstance();
                 BMGins.IsLooped = true;
                 BMGins.Volume = 0.5f;
                 BMGins.Play();
 
-                _previousBGM = BMG; // Update tracker
+                _previousBGM = BMG; 
             }
             previousMouse = currentMouse;
             currentMouse = Mouse.GetState();
@@ -865,9 +865,8 @@ Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
 
 
 
-            // BLACK BARS
             GraphicsDevice.SetRenderTarget(null);
-            GraphicsDevice.Clear(Color.Black); // fill screen with black
+            GraphicsDevice.Clear(Color.Black);
 
             var screenWidth = GraphicsDevice.PresentationParameters.BackBufferWidth;
             var screenHeight = GraphicsDevice.PresentationParameters.BackBufferHeight;
