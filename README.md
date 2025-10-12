@@ -6,7 +6,8 @@
 It is a spiritual successor to the golden age of narrative systems: a **visual novel framework** with a **real-time console**, **encrypted save system**, and **scene-based sequencing**, handcrafted for precision storytelling.
 
 ---
-
+## [Assistance sheet](https://docs.google.com/spreadsheets/d/1KXPQoEuLWwxANqYrOsZkQSdWTYdTaI_wiqFZr7LF8Nk/edit?usp=sharing)
+---
 ## 🌌 Overview
 
 URGP transforms the structure of a traditional visual novel into a flexible **cinematic engine**.  
