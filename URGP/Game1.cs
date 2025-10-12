@@ -117,7 +117,6 @@ namespace URGP
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             Window.Title = "Universal Relic Game Platform";
-
             _graphics.HardwareModeSwitch = false;
         }
 
@@ -143,7 +142,7 @@ namespace URGP
         }
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+          
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _renderTarget = new RenderTarget2D(GraphicsDevice, _internalWidth, _internalHeight);
 
@@ -254,35 +253,7 @@ namespace URGP
                 IsConsoleOpen = false;
                
             }
-            if (debugMode)
-            {
-
-                if (Keyboard.GetState().IsKeyDown(Keys.Up))
-                {
-
-                    bottomLeft = new Vector2(bottomLeft.X, bottomLeft.Y - 1);
-                    bottomRight = new Vector2(bottomRight.X, bottomRight.Y - 1);
-                    bottomMid = new Vector2(bottomMid.X, bottomMid.Y - 1);
-                }
-                if (Keyboard.GetState().IsKeyDown(Keys.Down))
-                {
-                    bottomLeft = new Vector2(bottomLeft.X, bottomLeft.Y + 1);
-                    bottomRight = new Vector2(bottomRight.X, bottomRight.Y + 1);
-                    bottomMid = new Vector2(bottomMid.X, bottomMid.Y + 1);
-                }
-                if (Keyboard.GetState().IsKeyDown(Keys.Left))
-                {
-                    bottomLeft = new Vector2(bottomLeft.X - 1, bottomLeft.Y);
-                    bottomRight = new Vector2(bottomRight.X - 1, bottomRight.Y);
-                    bottomMid = new Vector2(bottomMid.X - 1, bottomMid.Y);
-                }
-                if (Keyboard.GetState().IsKeyDown(Keys.Right))
-                {
-                    bottomLeft = new Vector2(bottomLeft.X + 1, bottomLeft.Y);
-                    bottomRight = new Vector2(bottomRight.X + 1, bottomRight.Y);
-                    bottomMid = new Vector2(bottomMid.X + 1, bottomMid.Y);
-                }
-            }
+           
             if (keyboardState.IsKeyUp(Keys.Space))
             {
                 keyPressed = false;
