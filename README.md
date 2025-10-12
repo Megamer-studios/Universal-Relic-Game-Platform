@@ -1,5 +1,7 @@
 # 🎭 Universal Relic Game Platform (URGP)
 
+![URGP](https://github.com/Megamer-studios/Universal-Relic-Game-Platform/blob/master/Logo1.png)
+
 **Universal Relic Game Platform (URGP)** is an original C# storytelling engine built upon **MonoGame** — a hybrid of art, code, and orchestration.  
 It is a spiritual successor to the golden age of narrative systems: a **visual novel framework** with a **real-time console**, **encrypted save system**, and **scene-based sequencing**, handcrafted for precision storytelling.
 
@@ -223,7 +225,7 @@ URGP is designed to scale:
 - Dialogue branching via tagged `.dlg` blocks  
 - Choice UI and visual transitions  
 - Scripting layer for dynamic variables  
-- Custom save serialization and achievements  
+- Custom save serialization
 
 ---
 
