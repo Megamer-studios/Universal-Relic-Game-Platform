@@ -19,8 +19,7 @@ namespace URGP
             if (game.filePath == @"Dialogues/Dia1.dlg")
             {
                 if (game.Line == 1)
-                {
-                    
+                {                   
                     game.Line1();
                 }
                 else if (game.Line == 2)
@@ -33,6 +32,7 @@ namespace URGP
                     game.NewbottomMid.Y += 900;
                     game.NewbottomLeft.Y += 900;
                     game.NewbottomRight.Y += 900;
+                   
                     game.Cem1 = game.Content.Load<Texture2D>("Empty");
                     game.Cem2 = game.Content.Load<Texture2D>("Empty");
                     game.Cem3 = game.Content.Load<Texture2D>("Empty");
@@ -222,7 +222,7 @@ namespace URGP
                     game.Portrait = game.Content.Load<Texture2D>("Portrait1");
                     game.BMG = game.Content.Load<SoundEffect>("AMachine");
                 }
-
+               
             }
         }
     }

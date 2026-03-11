@@ -114,7 +114,7 @@ namespace URGP
 
         public Game1()
         {
-            Inventory.InventoryItems.InitializeItems();
+            Inventory.InventoryItems.InitializeItems(this);
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
@@ -522,16 +522,17 @@ namespace URGP
                 if (parts.Length == 2 && int.TryParse(parts[1], out int itemid))
                 {
                     var item = PlayerInventory.FirstOrDefault(x => x.id == itemid);
-                    if (itemid == 1 && PlayerInventory.Contains(item))
+                    if (PlayerInventory.Contains(item))
                     {
+                        ConsoleText = $"Used item {item.ToString()}";
+                        item.Use();
+                      
                         
-                        ConsoleText = $"Used item {item}";
                     }
-                    
-                    else
-                    {
-                        ConsoleText = "You can't use that.";
-                    }
+                    //else
+                    //{
+                    //    ConsoleText = "You can't use that.";
+                    //}
                 }
                 else
                 {
@@ -828,21 +829,7 @@ Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
 
 
 
-            if (IsConsoleOpen)
-            {
-                Color color = new Color();
-                if (debugMode)
-                {
-                    color = Color.Red;
-                }
-                else
-                {
-                    color = Color.White;
-                }
-                _spriteBatch.Draw(pixel, new Rectangle(0, 0, 1024, 768), semiTransparentBlack);
-                _spriteBatch.DrawString(_font, "Console", new Vector2(100, 50), color);
-                _spriteBatch.DrawString(_font, ConsoleText, new Vector2(100, 100), color);
-            }
+       
             _spriteBatch.DrawString(_font, infoText, new Vector2(150, 150), Color.White);
             _spriteBatch.DrawString(_font, infoText2, new Vector2(150, 100), Color.White);
             if (debugMode)
@@ -859,7 +846,21 @@ Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
                 _spriteBatch.DrawString(_font, dInfo, new Vector2(5, 5), Color.Lime);
 
             }
-
+            if (IsConsoleOpen)
+            {
+                Color color = new Color();
+                if (debugMode)
+                {
+                    color = Color.Red;
+                }
+                else
+                {
+                    color = Color.White;
+                }
+                _spriteBatch.Draw(pixel, new Rectangle(0, 0, 1024, 768), semiTransparentBlack);
+                _spriteBatch.DrawString(_font, "Console", new Vector2(100, 50), color);
+                _spriteBatch.DrawString(_font, ConsoleText, new Vector2(100, 100), color);
+            }
             _spriteBatch.End();
 
 

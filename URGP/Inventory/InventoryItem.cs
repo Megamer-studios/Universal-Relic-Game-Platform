@@ -11,5 +11,19 @@ namespace URGP.Inventory
     {
         public string name { get; set; }
         public int id { get; set; }
+
+        public event Action OnUse;
+
+     
+        public void Use()
+        {
+            OnUse?.Invoke();
+        }
+
+      
+        public override string ToString()
+        {
+            return name ?? base.ToString();
+        }
     }
 }

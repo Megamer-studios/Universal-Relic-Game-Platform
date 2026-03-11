@@ -11,23 +11,27 @@ namespace URGP.Inventory
     {
         public static List<InventoryItem> Items { get; set; }
 
-        public static void InitializeItems()
+        public static void InitializeItems(Game1 game1)
         {
             Items = new List<InventoryItem>();
-            AddItem("Calling Card", 0);
-
-
-        }
-
-        public static void AddItem(string name, int id)
-        {
-            InventoryItem item = new InventoryItem
+            InventoryItem CallingCard = new InventoryItem
             {
-                name = name,
-                id = id
+                name = "Calling card",
+                id = 0
             };
-            Items.Add(item);
+            CallingCard.OnUse += () =>
+            {
+                game1.ConsoleText = "This is a calling card. It has the name 'Calling card' and the id 0.";
+            };
+            Items.Add(CallingCard);
+
+
         }
+
+    
+      
+
+      
     }
 
 }

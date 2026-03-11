@@ -122,6 +122,12 @@
 /processorParam:TextureFormat=Color
 /build:Portrait3.png
 
+#begin RefractShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:RefractShader.fx
+
 #begin Scream.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
