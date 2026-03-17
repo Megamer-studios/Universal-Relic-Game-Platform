@@ -150,7 +150,7 @@ A familiar voice whispers...
 Who are you?
 ```
 
-`
+` \n
 ` is automatically converted into a new line during rendering.
 
 Dialogue progression is handled by `Line` numbers, starting at `1`, with events in `Progress.cs` mapping directly to specific lines.
